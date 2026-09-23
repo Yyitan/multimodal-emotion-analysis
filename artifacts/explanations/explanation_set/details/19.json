@@ -1,0 +1,212 @@
+{
+  "schema_version": "1.0.0",
+  "sample_id": "19",
+  "prediction": {
+    "polarity": "Negative",
+    "intensity": -0.08350168168544769,
+    "probabilities": {
+      "Negative": 0.45679956674575806,
+      "Neutral": 0.22401024401187897,
+      "Positive": 0.31919020414352417
+    }
+  },
+  "explanation": {
+    "target_output": "predicted_class_probability:Negative",
+    "baseline_score": 0.31309211254119873,
+    "full_score": 0.45679956674575806,
+    "coalition_scores": {
+      "empty": 0.31309211254119873,
+      "text": 0.5855231285095215,
+      "audio": 0.2939735949039459,
+      "vision": 0.1448829025030136,
+      "text+audio": 0.5648517608642578,
+      "text+vision": 0.47488898038864136,
+      "audio+vision": 0.1514514982700348,
+      "text+audio+vision": 0.45679956674575806
+    },
+    "modalities": {
+      "text": {
+        "available": true,
+        "shapley_signed": 0.2927404021223386,
+        "degree": 0.662648396730483
+      },
+      "audio": {
+        "available": true,
+        "shapley_signed": -0.01475310573975245,
+        "degree": 0.03339519176159609
+      },
+      "vision": {
+        "available": true,
+        "shapley_signed": -0.13427984217802683,
+        "degree": 0.30395641150792085
+      }
+    },
+    "primary_modality": "text",
+    "primary_tied_modalities": [
+      "text"
+    ],
+    "primary_confidence": "unique",
+    "efficiency_residual": 2.7755575615628914e-17,
+    "evidence": {
+      "text": [
+        {
+          "start_index": 11,
+          "end_index": 13,
+          "score_drop": 0.03961813449859619,
+          "importance": 0.03961813449859619,
+          "peak_importance": 0.023814380168914795,
+          "member_windows": [
+            [
+              11,
+              12
+            ],
+            [
+              12,
+              13
+            ]
+          ],
+          "text": "to mistakes",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        },
+        {
+          "start_index": 29,
+          "end_index": 31,
+          "score_drop": 0.0373530387878418,
+          "importance": 0.0373530387878418,
+          "peak_importance": 0.020353764295578003,
+          "member_windows": [
+            [
+              29,
+              30
+            ],
+            [
+              30,
+              31
+            ]
+          ],
+          "text": "imperfections",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        },
+        {
+          "start_index": 17,
+          "end_index": 18,
+          "score_drop": 0.023974180221557617,
+          "importance": 0.023974180221557617,
+          "peak_importance": 0.023974180221557617,
+          "member_windows": [
+            [
+              17,
+              18
+            ]
+          ],
+          "text": "hate",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        }
+      ],
+      "audio": [
+        {
+          "start_index": 2,
+          "end_index": 11,
+          "score_drop": 0.001033008098602295,
+          "importance": 0.001033008098602295,
+          "peak_importance": 0.00027421116828918457,
+          "member_windows": [
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              7,
+              10
+            ],
+            [
+              8,
+              11
+            ]
+          ],
+          "time": {
+            "start_sec": 1.0193500000000002,
+            "end_sec": 5.124300000000001,
+            "keyframe_sec": null,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          }
+        }
+      ],
+      "vision": [
+        {
+          "start_index": 8,
+          "end_index": 16,
+          "score_drop": 0.01030343770980835,
+          "importance": 0.01030343770980835,
+          "peak_importance": 0.0022623538970947266,
+          "member_windows": [
+            [
+              8,
+              11
+            ],
+            [
+              9,
+              12
+            ],
+            [
+              10,
+              13
+            ],
+            [
+              12,
+              15
+            ],
+            [
+              13,
+              16
+            ]
+          ],
+          "time": {
+            "start_sec": 4.077400000000001,
+            "end_sec": 8.402750000000001,
+            "keyframe_sec": 6.240075000000001,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          },
+          "keyframe_sec": 6.240075000000001
+        }
+      ]
+    }
+  },
+  "faithfulness": {
+    "metric": "AOPC cumulative deletion",
+    "ranked_aopc": 0.06990566849708557,
+    "random_aopc_mean": -0.0003354489207267761,
+    "random_aopc_std": 0.016241760584098312,
+    "aopc_gain_over_random": 0.07024111741781235,
+    "steps": 5,
+    "random_trials": 100,
+    "seed": 20260923
+  },
+  "quality": {
+    "flags": [],
+    "notes": []
+  },
+  "provenance": {
+    "feature_version": "aligned_50",
+    "explainer": "exact_3modality_shapley_plus_local_occlusion",
+    "explainer_config": "configs/explanation.yaml",
+    "model_reference": "frozen_robust_gated.pt@sha256:989b84b5e507a97186179e80e0f7f8c8e29714f3c84a84aa1d60b3a2ee5bb601"
+  }
+}

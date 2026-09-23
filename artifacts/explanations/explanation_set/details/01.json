@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0.0",
+  "sample_id": "01",
+  "prediction": {
+    "polarity": "Neutral",
+    "intensity": 0.21312227845191956,
+    "probabilities": {
+      "Negative": 0.1328856348991394,
+      "Neutral": 0.5448259115219116,
+      "Positive": 0.32228848338127136
+    }
+  },
+  "explanation": {
+    "target_output": "predicted_class_probability:Neutral",
+    "baseline_score": 0.3023746907711029,
+    "full_score": 0.5448259115219116,
+    "coalition_scores": {
+      "empty": 0.3023746907711029,
+      "text": 0.5127518773078918,
+      "audio": 0.3312537670135498,
+      "vision": 0.4381665885448456,
+      "text+audio": 0.5235642194747925,
+      "text+vision": 0.5380546450614929,
+      "audio+vision": 0.41858693957328796,
+      "text+audio+vision": 0.5448259115219116
+    },
+    "modalities": {
+      "text": {
+        "available": true,
+        "shapley_signed": 0.1609051376581192,
+        "degree": 0.6636598370585127
+      },
+      "audio": {
+        "available": true,
+        "shapley_signed": 0.010422229766845703,
+        "degree": 0.042986913963851174
+      },
+      "vision": {
+        "available": true,
+        "shapley_signed": 0.07112385332584381,
+        "degree": 0.29335324897763615
+      }
+    },
+    "primary_modality": "text",
+    "primary_tied_modalities": [
+      "text"
+    ],
+    "primary_confidence": "unique",
+    "efficiency_residual": 0.0,
+    "evidence": {
+      "text": [
+        {
+          "start_index": 3,
+          "end_index": 5,
+          "score_drop": 0.011952400207519531,
+          "importance": 0.011952400207519531,
+          "peak_importance": 0.006960868835449219,
+          "member_windows": [
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "text": "wear components",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        },
+        {
+          "start_index": 22,
+          "end_index": 23,
+          "score_drop": 0.00920945405960083,
+          "importance": 0.00920945405960083,
+          "peak_importance": 0.00920945405960083,
+          "member_windows": [
+            [
+              22,
+              23
+            ]
+          ],
+          "text": "requirements",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        },
+        {
+          "start_index": 9,
+          "end_index": 10,
+          "score_drop": 0.00656968355178833,
+          "importance": 0.00656968355178833,
+          "peak_importance": 0.00656968355178833,
+          "member_windows": [
+            [
+              9,
+              10
+            ]
+          ],
+          "text": "belt",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        }
+      ],
+      "audio": [
+        {
+          "start_index": 0,
+          "end_index": 4,
+          "score_drop": 0.0001334547996520996,
+          "importance": 0.0001334547996520996,
+          "peak_importance": 7.164478302001953e-05,
+          "member_windows": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "time": {
+            "start_sec": 0.0,
+            "end_sec": 1.443207126948775,
+            "keyframe_sec": null,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          }
+        },
+        {
+          "start_index": 14,
+          "end_index": 20,
+          "score_drop": 3.2007694244384766e-05,
+          "importance": 3.2007694244384766e-05,
+          "peak_importance": 1.4662742614746094e-05,
+          "member_windows": [
+            [
+              14,
+              17
+            ],
+            [
+              16,
+              19
+            ],
+            [
+              17,
+              20
+            ]
+          ],
+          "time": {
+            "start_sec": 5.071269487750556,
+            "end_sec": 7.206013363028953,
+            "keyframe_sec": null,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          }
+        }
+      ],
+      "vision": [
+        {
+          "start_index": 0,
+          "end_index": 5,
+          "score_drop": 0.008025586605072021,
+          "importance": 0.008025586605072021,
+          "peak_importance": 0.002942681312561035,
+          "member_windows": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "time": {
+            "start_sec": 0.0,
+            "end_sec": 1.9743875278396437,
+            "keyframe_sec": 0.9871937639198218,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          },
+          "keyframe_sec": 0.9871937639198218
+        },
+        {
+          "start_index": 7,
+          "end_index": 13,
+          "score_drop": 0.004528343677520752,
+          "importance": 0.004528343677520752,
+          "peak_importance": 0.002269148826599121,
+          "member_windows": [
+            [
+              7,
+              10
+            ],
+            [
+              10,
+              13
+            ]
+          ],
+          "time": {
+            "start_sec": 2.6057906458797326,
+            "end_sec": 4.590200445434299,
+            "keyframe_sec": 3.5979955456570156,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          },
+          "keyframe_sec": 3.5979955456570156
+        }
+      ]
+    }
+  },
+  "faithfulness": {
+    "metric": "AOPC cumulative deletion",
+    "ranked_aopc": 0.028682392835617066,
+    "random_aopc_mean": 0.0008699998855590822,
+    "random_aopc_std": 0.007195578683474998,
+    "aopc_gain_over_random": 0.027812392950057985,
+    "steps": 5,
+    "random_trials": 100,
+    "seed": 20260923
+  },
+  "quality": {
+    "flags": [],
+    "notes": []
+  },
+  "provenance": {
+    "feature_version": "aligned_50",
+    "explainer": "exact_3modality_shapley_plus_local_occlusion",
+    "explainer_config": "configs/explanation.yaml",
+    "model_reference": "frozen_robust_gated.pt@sha256:989b84b5e507a97186179e80e0f7f8c8e29714f3c84a84aa1d60b3a2ee5bb601"
+  }
+}

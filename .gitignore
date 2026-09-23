@@ -1,0 +1,41 @@
+# Local data and derived sample arrays
+data/*
+!data/README.md
+*.pkl
+*.xlsx
+*.xls
+*.mp4
+*.wav
+*.npz
+
+# Public pretrained model weights and caches
+third_party/
+cache/
+env/
+.venv/
+venv/
+*.safetensors
+*.bin
+
+# Experiment runtime outputs
+runs/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.log
+.DS_Store
+
+# Local secrets and IDE files
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+*.pem
+*.key
+
+# Temporary files
+*.tmp
+~$*
+
+src/features/model_cache/

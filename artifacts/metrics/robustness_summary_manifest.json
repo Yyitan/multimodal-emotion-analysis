@@ -1,0 +1,30 @@
+{
+  "source_metrics": [
+    "artifacts/metrics/robustness_valid.csv",
+    "artifacts/metrics/comparisons/robustness_valid.csv"
+  ],
+  "source_predictions": "artifacts/metrics/robustness_valid_clean_predictions.csv",
+  "primary_family": "frozen_gated",
+  "figure_split": "valid",
+  "font_language": "English",
+  "font_note_for_chinese_caption": "No installed font was verified to contain all required Chinese glyphs; figures use English labels. The Chinese paper caption should state this explicitly.",
+  "generated_outputs": [
+    "artifacts/figures/missing_rate_performance_curves.png",
+    "artifacts/figures/missing_rate_performance_curves.pdf",
+    "artifacts/figures/modality_type_heatmap.png",
+    "artifacts/figures/modality_type_heatmap.pdf",
+    "artifacts/figures/position_effect.png",
+    "artifacts/figures/position_effect.pdf",
+    "artifacts/figures/confusion_matrix_valid_frozen_robust_gated.png",
+    "artifacts/figures/confusion_matrix_valid_frozen_robust_gated.pdf",
+    "artifacts/metrics/confusion_matrix_valid_frozen_robust_gated.csv"
+  ],
+  "tables": [
+    "artifacts/metrics/robustness_multiseed_mean_std.csv",
+    "artifacts/metrics/robustness_model_summary.csv",
+    "artifacts/metrics/robustness_baseline_comparison.csv",
+    "artifacts/metrics/robustness_ablation.csv",
+    "artifacts/metrics/training_seed_validation_metrics.csv",
+    "artifacts/metrics/training_seed_mean_std.csv"
+  ]
+}

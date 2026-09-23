@@ -1,0 +1,55 @@
+# Validation-only clean comparison. These are baselines/ablations, not model candidates.
+seed: 20260923
+device: auto
+
+data:
+  aligned_path: data/features_aligned/aligned_50.pkl
+
+models:
+  - name: concat_seed2026
+    family: concat
+    role: baseline
+    seed: 2026
+    checkpoint: artifacts/models/model_concat_seed2026.pt
+  - name: text_only_seed2026
+    family: text_only
+    role: baseline
+    seed: 2026
+    checkpoint: artifacts/models/model_single_text_seed2026.pt
+  - name: gated_no_augmentation_seed2026
+    family: gated_no_augmentation
+    role: ablation
+    seed: 2026
+    checkpoint: artifacts/models/gated_no_aug_seed2026.pt
+  - name: gated_no_consistency_seed2026
+    family: gated_no_consistency
+    role: ablation
+    seed: 2026
+    checkpoint: artifacts/models/gated_no_consistency_seed2026.pt
+
+evaluation:
+  batch_size: 64
+  num_workers: 0
+statistics:
+  bootstrap_resamples: 2000
+  confidence: 0.95
+validation_grid:
+  modalities: [T]
+  missing_rates: [0]
+  positions: [random]
+  span_counts: [1]
+test_grid:
+  modalities: [T]
+  missing_rates: [0]
+  positions: [random]
+  span_counts: [1]
+smoke:
+  max_samples: 16
+  max_conditions: 1
+  bootstrap_resamples: 50
+summary:
+  primary_family: frozen_gated
+  figure_split: valid
+output:
+  metrics_dir: artifacts/metrics/comparisons
+  figures_dir: artifacts/figures

@@ -1,0 +1,268 @@
+{
+  "schema_version": "1.0.0",
+  "title": "可解释性评测集全量预测与解释结果CSV",
+  "encoding": "UTF-8 with BOM is recommended for spreadsheet compatibility",
+  "row_granularity": "one row per explanation-set sample",
+  "null_representation": "empty string",
+  "list_representation": "JSON array serialized inside one CSV cell",
+  "columns": [
+    {
+      "name": "schema_version",
+      "type": "enum",
+      "values": [
+        "1.0.0"
+      ],
+      "required": true,
+      "description": "格式版本"
+    },
+    {
+      "name": "feature_version",
+      "type": "enum",
+      "values": [
+        "aligned_50",
+        "unaligned_50"
+      ],
+      "required": true
+    },
+    {
+      "name": "sample_id",
+      "type": "string",
+      "required": true,
+      "description": "可解释性评测集样本唯一编号"
+    },
+    {
+      "name": "polarity",
+      "type": "enum",
+      "values": [
+        "Negative",
+        "Neutral",
+        "Positive"
+      ],
+      "required": true
+    },
+    {
+      "name": "intensity",
+      "type": "number",
+      "minimum": -3.0,
+      "maximum": 3.0,
+      "required": true
+    },
+    {
+      "name": "prob_negative",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "required": true
+    },
+    {
+      "name": "prob_neutral",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "required": true
+    },
+    {
+      "name": "prob_positive",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "required": true
+    },
+    {
+      "name": "text_shapley_signed",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "audio_shapley_signed",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "vision_shapley_signed",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "text_degree",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "required": true
+    },
+    {
+      "name": "audio_degree",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "required": true
+    },
+    {
+      "name": "vision_degree",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "required": true
+    },
+    {
+      "name": "primary_modality",
+      "type": "enum",
+      "values": [
+        "text",
+        "audio",
+        "vision",
+        "none"
+      ],
+      "required": true
+    },
+    {
+      "name": "primary_confidence",
+      "type": "enum",
+      "values": [
+        "unique",
+        "tie",
+        "insufficient_signal"
+      ],
+      "required": true
+    },
+    {
+      "name": "text_evidence",
+      "type": "json_array[string]",
+      "required": true,
+      "description": "原文逐字引用；不得由模型补写"
+    },
+    {
+      "name": "audio_start_sec",
+      "type": "number_or_null",
+      "minimum": 0.0,
+      "required": false,
+      "description": "CSV仅汇总该模态重要性最高的一段；全部证据段见explanation_json"
+    },
+    {
+      "name": "audio_end_sec",
+      "type": "number_or_null",
+      "minimum": 0.0,
+      "required": false,
+      "description": "CSV仅汇总该模态重要性最高的一段；全部证据段见explanation_json"
+    },
+    {
+      "name": "vision_start_sec",
+      "type": "number_or_null",
+      "minimum": 0.0,
+      "required": false,
+      "description": "CSV仅汇总该模态重要性最高的一段；全部证据段见explanation_json"
+    },
+    {
+      "name": "vision_end_sec",
+      "type": "number_or_null",
+      "minimum": 0.0,
+      "required": false,
+      "description": "CSV仅汇总该模态重要性最高的一段；全部证据段见explanation_json"
+    },
+    {
+      "name": "vision_keyframe_sec",
+      "type": "number_or_null",
+      "minimum": 0.0,
+      "required": false,
+      "description": "CSV仅汇总该模态重要性最高的一段；全部证据段见explanation_json"
+    },
+    {
+      "name": "text_location_method",
+      "type": "enum",
+      "values": [
+        "token_alignment",
+        "forced_alignment",
+        "uniform_50_position",
+        "unavailable"
+      ],
+      "required": true
+    },
+    {
+      "name": "audio_location_method",
+      "type": "enum",
+      "values": [
+        "forced_alignment",
+        "uniform_50_position",
+        "uniform_position",
+        "unavailable"
+      ],
+      "required": true
+    },
+    {
+      "name": "vision_location_method",
+      "type": "enum",
+      "values": [
+        "forced_alignment",
+        "uniform_50_position",
+        "uniform_position",
+        "unavailable"
+      ],
+      "required": true
+    },
+    {
+      "name": "text_location_confidence",
+      "type": "enum",
+      "values": [
+        "exact",
+        "aligned",
+        "approximate",
+        "unavailable"
+      ],
+      "required": true
+    },
+    {
+      "name": "audio_location_confidence",
+      "type": "enum",
+      "values": [
+        "aligned",
+        "approximate",
+        "unavailable"
+      ],
+      "required": true
+    },
+    {
+      "name": "vision_location_confidence",
+      "type": "enum",
+      "values": [
+        "aligned",
+        "approximate",
+        "unavailable"
+      ],
+      "required": true
+    },
+    {
+      "name": "text_available",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "name": "audio_available",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "name": "vision_available",
+      "type": "boolean",
+      "required": true
+    },
+    {
+      "name": "quality_flags",
+      "type": "json_array[string]",
+      "required": true
+    },
+    {
+      "name": "explanation_json",
+      "type": "string",
+      "required": true,
+      "description": "对应详细JSON相对路径"
+    }
+  ],
+  "cross_field_rules": [
+    "three probabilities sum to 1 within tolerance 1e-6",
+    "available modality degrees sum to 1 within tolerance 1e-6 unless primary_modality is none",
+    "an unavailable modality has signed Shapley=0, degree=0, empty evidence and unavailable timestamps",
+    "end_sec is not earlier than start_sec; visual keyframe lies inside the visual interval",
+    "uniform mapping must use confidence=approximate",
+    "sample 13 aligned visual all-zero input must set vision_available=false and include VISION_ALL_ZERO"
+  ]
+}

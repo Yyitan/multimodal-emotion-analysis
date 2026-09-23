@@ -1,0 +1,2 @@
+﻿split,n_seeds,selection_rule,accuracy_mean,accuracy_std,macro_f1_mean,macro_f1_std,weighted_f1_mean,weighted_f1_std,mae_mean,mae_std,pearson_mean,pearson_std,selection_score_mean,selection_score_std
+valid only,3,"0.35*MacroF1 + 0.15*Accuracy + 0.25*((Pearson+1)/2) + 0.25*(1-clip(MAE,0,6)/6)",0.62591575,0.0055514449,0.60051293,0.0093388604,0.62358694,0.0049089174,0.58710965,0.0017129485,0.6533468,0.0072386438,0.73627234,0.0039105364

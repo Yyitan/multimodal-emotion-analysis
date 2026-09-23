@@ -1,0 +1,16 @@
+{
+  "sample_id": "-3g5yACwYnA__13",
+  "valid_length": 15,
+  "alignment_method": "ctc_forced_alignment",
+  "alignment_confidence": 0.86006098985672,
+  "frame_times": [
+    0.8078616261482239,
+    3.1913044452667236,
+    4.9977030754089355
+  ],
+  "output_files": [
+    "典型样本_三模态时序对齐展示.png",
+    "典型样本_逐位置对应表.csv",
+    "典型样本说明.md"
+  ]
+}

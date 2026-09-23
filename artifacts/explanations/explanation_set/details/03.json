@@ -1,0 +1,254 @@
+{
+  "schema_version": "1.0.0",
+  "sample_id": "03",
+  "prediction": {
+    "polarity": "Negative",
+    "intensity": -0.3238285183906555,
+    "probabilities": {
+      "Negative": 0.49273183941841125,
+      "Neutral": 0.32923808693885803,
+      "Positive": 0.1780300885438919
+    }
+  },
+  "explanation": {
+    "target_output": "predicted_class_probability:Negative",
+    "baseline_score": 0.31309211254119873,
+    "full_score": 0.49273183941841125,
+    "coalition_scores": {
+      "empty": 0.31309211254119873,
+      "text": 0.4913526475429535,
+      "audio": 0.3065641522407532,
+      "vision": 0.2788204848766327,
+      "text+audio": 0.48028698563575745,
+      "text+vision": 0.5054737329483032,
+      "audio+vision": 0.2862229645252228,
+      "text+audio+vision": 0.49273183941841125
+    },
+    "modalities": {
+      "text": {
+        "available": true,
+        "shapley_signed": 0.1949858168760935,
+        "degree": 0.9270386969486134
+      },
+      "audio": {
+        "available": true,
+        "shapley_signed": -0.007033814986546834,
+        "degree": 0.03344150248553527
+      },
+      "vision": {
+        "available": true,
+        "shapley_signed": -0.008312275012334188,
+        "degree": 0.039519800565851235
+      }
+    },
+    "primary_modality": "text",
+    "primary_tied_modalities": [
+      "text"
+    ],
+    "primary_confidence": "unique",
+    "efficiency_residual": 5.551115123125783e-17,
+    "evidence": {
+      "text": [
+        {
+          "start_index": 24,
+          "end_index": 25,
+          "score_drop": 0.014887005090713501,
+          "importance": 0.014887005090713501,
+          "peak_importance": 0.014887005090713501,
+          "member_windows": [
+            [
+              24,
+              25
+            ]
+          ],
+          "text": "into",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        },
+        {
+          "start_index": 20,
+          "end_index": 21,
+          "score_drop": 0.014276951551437378,
+          "importance": 0.014276951551437378,
+          "peak_importance": 0.014276951551437378,
+          "member_windows": [
+            [
+              20,
+              21
+            ]
+          ],
+          "text": "t",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        },
+        {
+          "start_index": 14,
+          "end_index": 15,
+          "score_drop": 0.009873270988464355,
+          "importance": 0.009873270988464355,
+          "peak_importance": 0.009873270988464355,
+          "member_windows": [
+            [
+              14,
+              15
+            ]
+          ],
+          "text": "just",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        },
+        {
+          "start_index": 28,
+          "end_index": 29,
+          "score_drop": 0.00889575481414795,
+          "importance": 0.00889575481414795,
+          "peak_importance": 0.00889575481414795,
+          "member_windows": [
+            [
+              28,
+              29
+            ]
+          ],
+          "text": "take",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        },
+        {
+          "start_index": 18,
+          "end_index": 19,
+          "score_drop": 0.008868992328643799,
+          "importance": 0.008868992328643799,
+          "peak_importance": 0.008868992328643799,
+          "member_windows": [
+            [
+              18,
+              19
+            ]
+          ],
+          "text": "don",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        }
+      ],
+      "audio": [
+        {
+          "start_index": 21,
+          "end_index": 27,
+          "score_drop": 0.0010249316692352295,
+          "importance": 0.0010249316692352295,
+          "peak_importance": 0.00031191110610961914,
+          "member_windows": [
+            [
+              21,
+              24
+            ],
+            [
+              22,
+              25
+            ],
+            [
+              23,
+              26
+            ],
+            [
+              24,
+              27
+            ]
+          ],
+          "time": {
+            "start_sec": 7.98326359832636,
+            "end_sec": 11.16317991631799,
+            "keyframe_sec": null,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          }
+        },
+        {
+          "start_index": 31,
+          "end_index": 34,
+          "score_drop": 0.00017213821411132812,
+          "importance": 0.00017213821411132812,
+          "peak_importance": 0.00017213821411132812,
+          "member_windows": [
+            [
+              31,
+              34
+            ]
+          ],
+          "time": {
+            "start_sec": 14.05857740585774,
+            "end_sec": 16.0,
+            "keyframe_sec": null,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          }
+        }
+      ],
+      "vision": [
+        {
+          "start_index": 8,
+          "end_index": 16,
+          "score_drop": 0.014969319105148315,
+          "importance": 0.014969319105148315,
+          "peak_importance": 0.0036475658416748047,
+          "member_windows": [
+            [
+              8,
+              11
+            ],
+            [
+              10,
+              13
+            ],
+            [
+              11,
+              14
+            ],
+            [
+              12,
+              15
+            ],
+            [
+              13,
+              16
+            ]
+          ],
+          "time": {
+            "start_sec": 2.711297071129707,
+            "end_sec": 6.510460251046025,
+            "keyframe_sec": 4.610878661087866,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          },
+          "keyframe_sec": 4.610878661087866
+        }
+      ]
+    }
+  },
+  "faithfulness": {
+    "metric": "AOPC cumulative deletion",
+    "ranked_aopc": 0.040926748514175416,
+    "random_aopc_mean": -0.0012899207472801208,
+    "random_aopc_std": 0.013158404203865612,
+    "aopc_gain_over_random": 0.042216669261455536,
+    "steps": 5,
+    "random_trials": 100,
+    "seed": 20260923
+  },
+  "quality": {
+    "flags": [],
+    "notes": []
+  },
+  "provenance": {
+    "feature_version": "aligned_50",
+    "explainer": "exact_3modality_shapley_plus_local_occlusion",
+    "explainer_config": "configs/explanation.yaml",
+    "model_reference": "frozen_robust_gated.pt@sha256:989b84b5e507a97186179e80e0f7f8c8e29714f3c84a84aa1d60b3a2ee5bb601"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "explanation_set_explanation.schema.json",
+  "title": "可解释性评测集单样本详细预测与解释",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "sample_id", "prediction", "explanation", "faithfulness", "quality", "provenance"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "sample_id": {"type": "string", "minLength": 1},
+    "prediction": {
+      "type": "object", "additionalProperties": false,
+      "required": ["polarity", "intensity", "probabilities"],
+      "properties": {
+        "polarity": {"enum": ["Negative", "Neutral", "Positive"]},
+        "intensity": {"type": "number", "minimum": -3, "maximum": 3},
+        "probabilities": {
+          "type": "object", "additionalProperties": false,
+          "required": ["Negative", "Neutral", "Positive"],
+          "properties": {
+            "Negative": {"type": "number", "minimum": 0, "maximum": 1},
+            "Neutral": {"type": "number", "minimum": 0, "maximum": 1},
+            "Positive": {"type": "number", "minimum": 0, "maximum": 1}
+          }
+        }
+      }
+    },
+    "explanation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["target_output", "baseline_score", "full_score", "coalition_scores", "modalities", "primary_modality", "primary_tied_modalities", "primary_confidence", "efficiency_residual", "evidence"],
+      "properties": {
+        "target_output": {"type": "string", "minLength": 1},
+        "baseline_score": {"type": "number"},
+        "full_score": {"type": "number"},
+        "coalition_scores": {
+          "type": "object", "additionalProperties": false,
+          "required": ["empty", "text", "audio", "vision", "text+audio", "text+vision", "audio+vision", "text+audio+vision"],
+          "properties": {
+            "empty": {"type": "number"}, "text": {"type": "number"}, "audio": {"type": "number"}, "vision": {"type": "number"},
+            "text+audio": {"type": "number"}, "text+vision": {"type": "number"}, "audio+vision": {"type": "number"}, "text+audio+vision": {"type": "number"}
+          }
+        },
+        "modalities": {
+          "type": "object", "additionalProperties": false,
+          "required": ["text", "audio", "vision"],
+          "properties": {
+            "text": {"$ref": "#/definitions/modalityContribution"},
+            "audio": {"$ref": "#/definitions/modalityContribution"},
+            "vision": {"$ref": "#/definitions/modalityContribution"}
+          }
+        },
+        "primary_modality": {"enum": ["text", "audio", "vision", "none"]},
+        "primary_tied_modalities": {"type": "array", "uniqueItems": true, "items": {"enum": ["text", "audio", "vision"]}},
+        "primary_confidence": {"enum": ["unique", "tie", "insufficient_signal"]},
+        "efficiency_residual": {"type": "number"},
+        "evidence": {
+          "type": "object", "additionalProperties": false,
+          "required": ["text", "audio", "vision"],
+          "properties": {
+            "text": {"type": "array", "items": {"$ref": "#/definitions/textEvidence"}},
+            "audio": {"type": "array", "items": {"$ref": "#/definitions/timedEvidence"}},
+            "vision": {"type": "array", "items": {"$ref": "#/definitions/visualEvidence"}}
+          }
+        }
+      }
+    },
+    "faithfulness": {
+      "type": "object", "additionalProperties": false,
+      "required": ["metric", "ranked_aopc", "random_aopc_mean", "random_aopc_std", "aopc_gain_over_random", "steps", "random_trials", "seed"],
+      "properties": {
+        "metric": {"const": "AOPC cumulative deletion"},
+        "ranked_aopc": {"type": "number"}, "random_aopc_mean": {"type": "number"}, "random_aopc_std": {"type": "number", "minimum": 0},
+        "aopc_gain_over_random": {"type": "number"}, "steps": {"type": "integer", "minimum": 1},
+        "random_trials": {"type": "integer", "minimum": 1}, "seed": {"type": "integer"}
+      }
+    },
+    "quality": {
+      "type": "object", "additionalProperties": false,
+      "required": ["flags", "notes"],
+      "properties": {
+        "flags": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "notes": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "provenance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["feature_version", "explainer", "explainer_config", "model_reference"],
+      "properties": {
+        "feature_version": {"enum": ["aligned_50", "unaligned_50"]},
+        "explainer": {"const": "exact_3modality_shapley_plus_local_occlusion"},
+        "explainer_config": {"type": "string", "minLength": 1},
+        "model_reference": {"type": "string", "minLength": 1}
+      }
+    }
+  },
+  "definitions": {
+    "modalityContribution": {
+      "type": "object", "additionalProperties": false,
+      "required": ["available", "shapley_signed", "degree"],
+      "properties": {
+        "available": {"type": "boolean"}, "shapley_signed": {"type": "number"},
+        "degree": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "positionEvidence": {
+      "type": "object",
+      "required": ["start_index", "end_index", "score_drop", "importance"],
+      "properties": {
+        "start_index": {"type": "integer", "minimum": 0}, "end_index": {"type": "integer", "minimum": 1},
+        "score_drop": {"type": "number"}, "importance": {"type": "number", "minimum": 0}
+      }
+    },
+    "timeLocation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["start_sec", "end_sec", "method", "confidence", "approximate", "note"],
+      "properties": {
+        "start_sec": {"type": ["number", "null"], "minimum": 0}, "end_sec": {"type": ["number", "null"], "minimum": 0},
+        "method": {"enum": ["forced_alignment", "uniform_50_position", "uniform_position", "unavailable"]},
+        "confidence": {"type": "string", "minLength": 1}, "approximate": {"type": "boolean"}, "note": {"type": "string"}
+      }
+    },
+    "textEvidence": {
+      "allOf": [
+        {"$ref": "#/definitions/positionEvidence"},
+        {"type": "object", "required": ["text", "location_method", "location_confidence"],
+         "properties": {"text": {"type": "string", "minLength": 1},
+          "location_method": {"enum": ["token_alignment", "forced_alignment", "uniform_50_position", "unavailable"]},
+          "location_confidence": {"enum": ["exact", "aligned", "approximate", "unavailable"]}}}
+      ]
+    },
+    "timedEvidence": {
+      "allOf": [
+        {"$ref": "#/definitions/positionEvidence"},
+        {"type": "object", "required": ["time"], "properties": {"time": {"$ref": "#/definitions/timeLocation"}}}
+      ]
+    },
+    "visualEvidence": {
+      "allOf": [
+        {"$ref": "#/definitions/positionEvidence"},
+        {"type": "object", "required": ["time", "keyframe_sec"],
+         "properties": {"time": {"$ref": "#/definitions/timeLocation"},
+          "keyframe_sec": {"type": ["number", "null"], "minimum": 0}}}
+      ]
+    }
+  }
+}

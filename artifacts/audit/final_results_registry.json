@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "truth_policy": "All values are derived from final artifacts; no evaluation-set labels or reverse matches are used.",
+  "extraction": {
+    "samples": 100,
+    "status_ok": 100,
+    "ctc_exact": 88,
+    "approximate": 12,
+    "vision_available_samples": 87,
+    "no_face_samples": 13,
+    "alignment_confidence_mean": 0.7657129563452615,
+    "npz_count": 100,
+    "npz_total_bytes": 6981612,
+    "face_landmarker_sha256": "41502960a7323080e5bbf46804f4fe6d0d83aa0aa82ba3209831286e94300083"
+  },
+  "robust_prediction": {
+    "frozen_checkpoint_sha256": "989b84b5e507a97186179e80e0f7f8c8e29714f3c84a84aa1d60b3a2ee5bb601",
+    "selected_seed": 2026,
+    "selected_epoch": 2,
+    "valid_clean": {
+      "accuracy": 0.6208791208791209,
+      "macro_f1": 0.6093818999740374,
+      "weighted_f1": 0.6245850128296841,
+      "mae": 0.5857491368017861,
+      "pearson": 0.6614128105816832
+    },
+    "test_clean": {
+      "accuracy": 0.6464924346629987,
+      "macro_f1": 0.6111296124328883,
+      "weighted_f1": 0.6513479803957833,
+      "mae": 0.6437996300866128,
+      "pearson": 0.6689629289420016
+    },
+    "valid_conditions": 281,
+    "test_conditions": 36,
+    "valid_samples": 728,
+    "test_samples": 727,
+    "valid_video_groups": 235,
+    "test_video_groups": 378,
+    "bootstrap_resamples": 2000,
+    "missing_modality_predictions": 30
+  },
+  "explanation": {
+    "explanation_set_samples": 20,
+    "ctc_exact": 20,
+    "ctc_mean_confidence": 0.863339,
+    "predicted_class_counts": {
+      "Negative": 9,
+      "Positive": 8,
+      "Neutral": 3
+    },
+    "main_modality_counts": {
+      "text": 16,
+      "vision": 4
+    },
+    "vision_zero_sample": "13",
+    "faithfulness": {
+      "split": "valid",
+      "seed": 20260923,
+      "model_reference": "models.pt@sha256:989b84b5e507a97186179e80e0f7f8c8e29714f3c84a84aa1d60b3a2ee5bb601",
+      "summary": {
+        "sample_target_rows": 1456,
+        "targets": {
+          "classification_predicted_probability": {
+            "n": 728,
+            "top_evidence_ranked_aopc_mean": 0.04766298396028442,
+            "top_evidence_ranked_aopc_std": 0.04648081516373079,
+            "random_deletion_aopc_mean_mean": 0.003179495710006236,
+            "random_deletion_aopc_mean_std": 0.015934787525365424,
+            "aopc_gain_over_random_mean": 0.04448348825027818,
+            "aopc_gain_over_random_std": 0.04206194081387201,
+            "primary_modality_deletion_drop_mean": 0.2511277979772006,
+            "primary_modality_deletion_drop_std": 0.1531494336956725,
+            "secondary_modality_deletion_drop_mean": -0.02075702371587465,
+            "secondary_modality_deletion_drop_std": 0.06754824792067769,
+            "primary_minus_secondary_drop_mean": 0.2718848216930752,
+            "primary_minus_secondary_drop_std": 0.17692669360652521,
+            "positive_window_fraction_mean": 0.5350147333012536,
+            "positive_window_fraction_std": 0.09193376610374182,
+            "top_k_importance_mass_fraction_mean": 0.5617556869653861,
+            "top_k_importance_mass_fraction_std": 0.19505977191754617,
+            "primary_top_k_position_fraction_mean": 0.27745489103947446,
+            "primary_top_k_position_fraction_std": 0.16788731807367652,
+            "shapley_cosine_similarity_mean": 0.9999855825095247,
+            "shapley_cosine_similarity_std": 0.00024697894247474453,
+            "top_evidence_position_jaccard_mean": 0.9873036685536685,
+            "top_evidence_position_jaccard_std": 0.06236550868830324,
+            "efficiency_residual_mean": 1.5231253376983176e-17,
+            "efficiency_residual_std": 2.9071646650085257e-17,
+            "primary_modality_unchanged_rate": 1.0,
+            "ranked_aopc_beats_random_rate": 0.989010989010989,
+            "primary_drop_exceeds_secondary_rate": 0.9821428571428571
+          },
+          "regression_value": {
+            "n": 728,
+            "top_evidence_ranked_aopc_mean": 0.09239100481552154,
+            "top_evidence_ranked_aopc_std": 0.10281632967488567,
+            "random_deletion_aopc_mean_mean": 0.003040259297824151,
+            "random_deletion_aopc_mean_std": 0.03570477851678476,
+            "aopc_gain_over_random_mean": 0.0893507455176974,
+            "aopc_gain_over_random_std": 0.09094947046112357,
+            "primary_modality_deletion_drop_mean": 0.3973571029098341,
+            "primary_modality_deletion_drop_std": 0.7443179228084604,
+            "secondary_modality_deletion_drop_mean": 0.026277984663905515,
+            "secondary_modality_deletion_drop_std": 0.25546528979421124,
+            "primary_minus_secondary_drop_mean": 0.3710791182459286,
+            "primary_minus_secondary_drop_std": 0.8698218127459061,
+            "positive_window_fraction_mean": 0.5161068169184094,
+            "positive_window_fraction_std": 0.07678504355356533,
+            "top_k_importance_mass_fraction_mean": 0.5428778470203897,
+            "top_k_importance_mass_fraction_std": 0.19228958472368793,
+            "primary_top_k_position_fraction_mean": 0.28740369914096103,
+            "primary_top_k_position_fraction_std": 0.17628571839164184,
+            "shapley_cosine_similarity_mean": 0.9999930223680117,
+            "shapley_cosine_similarity_std": 3.4395774981423976e-05,
+            "top_evidence_position_jaccard_mean": 0.9828449823985538,
+            "top_evidence_position_jaccard_std": 0.0721794927889781,
+            "efficiency_residual_mean": 7.996884595299676e-18,
+            "efficiency_residual_std": 7.489333354096675e-17,
+            "primary_modality_unchanged_rate": 0.9972527472527473,
+            "ranked_aopc_beats_random_rate": 0.9972527472527473,
+            "primary_drop_exceeds_secondary_rate": 0.6304945054945055
+          }
+        }
+      }
+    }
+  },
+  "limitations": [
+    "Twelve extraction samples use explicitly marked approximate alignment.",
+    "Thirteen extraction samples have no detected face and retain zero visual features with false masks.",
+    "Explanation-set sample 13 has an all-zero visual input; no visual evidence is produced.",
+    "CTC alignment is automatic rather than human gold annotation.",
+    "For regression explanations, primary-modality deletion exceeds secondary deletion in 63.05% of validation samples."
+  ],
+  "source_hashes": {
+    "feature_summary": "97a7a44446f4f7d0735fd64c6b6a7c198c20ff8e6d2bff49135fd525add2245d",
+    "frozen_test_metrics": "c07cc3ca833a7e3cd1e4f88d171f19250a9c1b276db542a9afa41a768d95dfa7",
+    "robustness_valid": "18a5c6ca659598437550ff1d6898080ce1d5d19498fcaa2e09c4b3ff98f327da",
+    "robustness_test": "d61772acbedf28f7f7cba8b9a98f94126511207c03a6ed9b2cc64c8245c897fb",
+    "faithfulness": "266240607bf09cf1217cf3836b75c96e9137266953fc4f9d028ed3f1d750fba4",
+    "explanation_set_csv": "95c66dd4d0be76bd1984e05a64f21a97a195cb971cdcdaf65e66067a98267ed9"
+  }
+}

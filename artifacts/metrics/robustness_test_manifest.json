@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-09-23T09:38:40.464098+00:00",
+  "mode": "full",
+  "split": "test",
+  "frozen_test_confirmation": true,
+  "label_source_policy": "aligned_features_only; no evaluation_set_labels_or_overlap_lookup",
+  "data_file": "data/features_aligned/aligned_50.pkl",
+  "data_sha256": "66e867aa74bc70a844e806e5571e371c9abb4a35f9e2887ce9b4d97ff2cb8fcd",
+  "config_file": "configs/robustness.yaml",
+  "config_sha256": "adf2ca1934f1f53c81c590a321614bcfa1a24e15264592b46e4b07504833ec3e",
+  "condition_grid": "test_grid",
+  "condition_count": 36,
+  "sample_count": 727,
+  "bootstrap_resamples": 2000,
+  "confidence": 0.95,
+  "bootstrap_unit": "video_id_prefix_before_first_underscore",
+  "device": "cuda",
+  "checkpoints": [
+    {
+      "name": "frozen_robust_gated",
+      "family": "frozen_gated",
+      "role": "primary",
+      "seed": 2026,
+      "checkpoint": "artifacts/models/frozen_robust_gated.pt",
+      "checkpoint_sha256": "989b84b5e507a97186179e80e0f7f8c8e29714f3c84a84aa1d60b3a2ee5bb601"
+    }
+  ],
+  "outputs": {
+    "metrics": "artifacts/metrics/robustness_test.csv",
+    "clean_predictions": "artifacts/metrics/robustness_test_clean_predictions.csv"
+  }
+}

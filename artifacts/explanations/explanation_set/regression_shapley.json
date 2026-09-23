@@ -1,0 +1,726 @@
+{
+  "target_output": "regression_value",
+  "model_reference": "frozen_robust_gated.pt@sha256:989b84b5e507a97186179e80e0f7f8c8e29714f3c84a84aa1d60b3a2ee5bb601",
+  "records": [
+    {
+      "sample_id": "01",
+      "target_output": "regression_value",
+      "prediction": 0.21312227845191956,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": 0.21312227845191956,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": 0.22326819598674774,
+          "audio": -0.3094958961009979,
+          "vision": -0.3603860139846802,
+          "text+audio": 0.2359960973262787,
+          "text+vision": 0.2092856764793396,
+          "audio+vision": -0.3334825336933136,
+          "text+audio+vision": 0.21312227845191956
+        },
+        "signed_contributions": {
+          "text": 0.4572934707005818,
+          "audio": -0.08047268042961757,
+          "vision": -0.11927294979492822
+        },
+        "degrees": {
+          "text": 0.6959912584451993,
+          "audio": 0.12247776474232662,
+          "vision": 0.1815309768124742
+        },
+        "primary_modality": "text",
+        "primary_tied_modalities": [
+          "text"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": 1.1102230246251565e-16,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "02",
+      "target_output": "regression_value",
+      "prediction": -0.09183226525783539,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": -0.09183226525783539,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": 0.12538284063339233,
+          "audio": -0.3102414011955261,
+          "vision": -1.2065707445144653,
+          "text+audio": 0.13400985300540924,
+          "text+vision": -0.09294082969427109,
+          "audio+vision": -1.0771889686584473,
+          "text+audio+vision": -0.09183226525783539
+        },
+        "signed_contributions": {
+          "text": 0.6447018968562285,
+          "audio": -0.0652342935403188,
+          "vision": -0.6268743065496285
+        },
+        "degrees": {
+          "text": 0.4822687271898241,
+          "audio": 0.04879845998317691,
+          "vision": 0.46893281282699895
+        },
+        "primary_modality": "text",
+        "primary_tied_modalities": [
+          "text"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": 0.0,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "03",
+      "target_output": "regression_value",
+      "prediction": -0.3238285183906555,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": -0.3238285183906555,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": -0.32562461495399475,
+          "audio": -0.3350784182548523,
+          "vision": -0.04233627766370773,
+          "text+audio": -0.3137403428554535,
+          "text+vision": -0.3376942276954651,
+          "audio+vision": -0.1457996666431427,
+          "text+audio+vision": -0.3238285183906555
+        },
+        "signed_contributions": {
+          "text": -0.1987459473311901,
+          "audio": -0.10752556845545767,
+          "vision": 0.026868559420108795
+        },
+        "degrees": {
+          "text": 0.596583725953242,
+          "audio": 0.32276383556893934,
+          "vision": 0.0806524384778186
+        },
+        "primary_modality": "text",
+        "primary_tied_modalities": [
+          "text"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": 0.0,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "04",
+      "target_output": "regression_value",
+      "prediction": -0.42855894565582275,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": -0.42855894565582275,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": -0.5706969499588013,
+          "audio": -0.30964982509613037,
+          "vision": 0.568610429763794,
+          "text+audio": -0.589257001876831,
+          "text+vision": -0.39140957593917847,
+          "audio+vision": 0.31514212489128113,
+          "text+audio+vision": -0.42855894565582275
+        },
+        "signed_contributions": {
+          "text": -0.6299286832412083,
+          "audio": -0.14612927039464316,
+          "vision": 0.3919245700041453
+        },
+        "degrees": {
+          "text": 0.5393305725825818,
+          "audio": 0.12511254872139171,
+          "vision": 0.3355568786960265
+        },
+        "primary_modality": "text",
+        "primary_tied_modalities": [
+          "text"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": -5.551115123125783e-17,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "05",
+      "target_output": "regression_value",
+      "prediction": 0.5466926693916321,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": 0.5466926693916321,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": 0.18182550370693207,
+          "audio": -0.3545273244380951,
+          "vision": 1.1406196355819702,
+          "text+audio": 0.2432844340801239,
+          "text+vision": 0.5195693969726562,
+          "audio+vision": 0.792627215385437,
+          "text+audio+vision": 0.5466926693916321
+        },
+        "signed_contributions": {
+          "text": -0.01043424010276793,
+          "audio": -0.14208174496889112,
+          "vision": 0.7436342164874077
+        },
+        "degrees": {
+          "text": 0.01164340540750321,
+          "audio": 0.15854679798286725,
+          "vision": 0.8298097966096295
+        },
+        "primary_modality": "vision",
+        "primary_tied_modalities": [
+          "vision"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": 0.0,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "06",
+      "target_output": "regression_value",
+      "prediction": 0.41709789633750916,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": 0.41709789633750916,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": 0.68204665184021,
+          "audio": -0.3202788829803467,
+          "vision": -0.757024884223938,
+          "text+audio": 0.696936845779419,
+          "text+vision": 0.40793317556381226,
+          "audio+vision": -0.7079790234565735,
+          "text+audio+vision": 0.41709789633750916
+        },
+        "signed_contributions": {
+          "text": 0.980878675977389,
+          "audio": -0.07824019094308217,
+          "vision": -0.44111502667268115
+        },
+        "degrees": {
+          "text": 0.6538171682204328,
+          "audio": 0.052151995283676804,
+          "vision": 0.29403083649589035
+        },
+        "primary_modality": "text",
+        "primary_tied_modalities": [
+          "text"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": 5.551115123125783e-17,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "07",
+      "target_output": "regression_value",
+      "prediction": 0.745092511177063,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": 0.745092511177063,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": 0.5785771608352661,
+          "audio": -0.29095715284347534,
+          "vision": 0.09929421544075012,
+          "text+audio": 0.6248152852058411,
+          "text+vision": 0.7323178648948669,
+          "audio+vision": -0.027715707197785378,
+          "text+audio+vision": 0.745092511177063
+        },
+        "signed_contributions": {
+          "text": 0.7234029949953158,
+          "audio": -0.09138094789038101,
+          "vision": 0.15749602609624463
+        },
+        "degrees": {
+          "text": 0.7440274592438424,
+          "audio": 0.09398624964583453,
+          "vision": 0.16198629111032306
+        },
+        "primary_modality": "text",
+        "primary_tied_modalities": [
+          "text"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": 0.0,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "08",
+      "target_output": "regression_value",
+      "prediction": 0.3968326449394226,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": 0.3968326449394226,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": 0.5521182417869568,
+          "audio": -0.3015243113040924,
+          "vision": -0.9888101816177368,
+          "text+audio": 0.5897542834281921,
+          "text+vision": 0.3781470060348511,
+          "audio+vision": -0.868617057800293,
+          "text+audio+vision": 0.3968326449394226
+        },
+        "signed_contributions": {
+          "text": 0.997037132581075,
+          "audio": -0.053166175882021584,
+          "vision": -0.5026127497355143
+        },
+        "degrees": {
+          "text": 0.6420832186252097,
+          "audio": 0.034238553627335966,
+          "vision": 0.32367822774745436
+        },
+        "primary_modality": "text",
+        "primary_tied_modalities": [
+          "text"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": 0.0,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "09",
+      "target_output": "regression_value",
+      "prediction": -2.2012031078338623,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": -2.2012031078338623,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": -2.157174587249756,
+          "audio": -0.3245774209499359,
+          "vision": -0.4079281687736511,
+          "text+audio": -2.1867055892944336,
+          "text+vision": -2.178696632385254,
+          "audio+vision": -0.4614139199256897,
+          "text+audio+vision": -2.2012031078338623
+        },
+        "signed_contributions": {
+          "text": -1.8896621763706205,
+          "audio": -0.11472223699092865,
+          "vision": -0.1523931324481964
+        },
+        "degrees": {
+          "text": 0.8761507092105603,
+          "audio": 0.05319150193018959,
+          "vision": 0.07065778885925
+        },
+        "primary_modality": "text",
+        "primary_tied_modalities": [
+          "text"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": 0.0,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "10",
+      "target_output": "regression_value",
+      "prediction": -1.5844793319702148,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": -1.5844793319702148,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": -1.643297553062439,
+          "audio": -0.30545830726623535,
+          "vision": 0.3165874779224396,
+          "text+audio": -1.675894021987915,
+          "text+vision": -1.5832014083862305,
+          "audio+vision": 0.16533370316028595,
+          "text+audio+vision": -1.5844793319702148
+        },
+        "signed_contributions": {
+          "text": -1.6612657755613327,
+          "audio": -0.11807859688997267,
+          "vision": 0.23929060250520706
+        },
+        "degrees": {
+          "text": 0.8229649224209649,
+          "audio": 0.05849427873532036,
+          "vision": 0.11854079884371473
+        },
+        "primary_modality": "text",
+        "primary_tied_modalities": [
+          "text"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": 0.0,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "11",
+      "target_output": "regression_value",
+      "prediction": -0.9321980476379395,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": -0.9321980476379395,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": -0.895659863948822,
+          "audio": -0.3284042775630951,
+          "vision": -0.600168764591217,
+          "text+audio": -0.9040811061859131,
+          "text+vision": -0.9430791735649109,
+          "audio+vision": -0.5007635951042175,
+          "text+audio+vision": -0.9321980476379395
+        },
+        "signed_contributions": {
+          "text": -0.5806541244188944,
+          "audio": -0.0758685419956843,
+          "vision": -0.2312498191992442
+        },
+        "degrees": {
+          "text": 0.6540573557170101,
+          "audio": 0.08545944284725983,
+          "vision": 0.26048320143573006
+        },
+        "primary_modality": "text",
+        "primary_tied_modalities": [
+          "text"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": 0.0,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "12",
+      "target_output": "regression_value",
+      "prediction": -0.8668668866157532,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": -0.8668668866157532,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": -0.6526807546615601,
+          "audio": -0.3302624225616455,
+          "vision": -1.3378305435180664,
+          "text+audio": -0.6580748558044434,
+          "text+vision": -0.8685771226882935,
+          "audio+vision": -1.2402361631393433,
+          "text+audio+vision": -0.8668668866157532
+        },
+        "signed_contributions": {
+          "text": -0.054721807440121964,
+          "audio": -0.07934216161568959,
+          "vision": -0.688377355535825
+        },
+        "degrees": {
+          "text": 0.0665358193999952,
+          "audio": 0.09647151625690141,
+          "vision": 0.8369926643431034
+        },
+        "primary_modality": "vision",
+        "primary_tied_modalities": [
+          "vision"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": -1.1102230246251565e-16,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "13",
+      "target_output": "regression_value",
+      "prediction": 0.08616062998771667,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": 0.08616062998771667,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": 0.07222400605678558,
+          "audio": -0.33608925342559814,
+          "vision": -0.044425562024116516,
+          "text+audio": 0.08616062998771667,
+          "text+vision": 0.07222400605678558,
+          "audio+vision": -0.33608925342559814,
+          "text+audio+vision": 0.08616062998771667
+        },
+        "signed_contributions": {
+          "text": 0.26944972574710846,
+          "audio": -0.13886353373527527,
+          "vision": 0.0
+        },
+        "degrees": {
+          "text": 0.6599093208207059,
+          "audio": 0.3400906791792942,
+          "vision": 0.0
+        },
+        "primary_modality": "text",
+        "primary_tied_modalities": [
+          "text"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": 0.0,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "14",
+      "target_output": "regression_value",
+      "prediction": 0.3063417971134186,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": 0.3063417971134186,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": 0.10913284122943878,
+          "audio": -0.2795313596725464,
+          "vision": 0.9169785976409912,
+          "text+audio": 0.1288677453994751,
+          "text+vision": 0.3031713664531708,
+          "audio+vision": 0.7174542546272278,
+          "text+audio+vision": 0.3063417971134186
+        },
+        "signed_contributions": {
+          "text": -0.12008603910605113,
+          "audio": -0.1072766954700152,
+          "vision": 0.5781300937136015
+        },
+        "degrees": {
+          "text": 0.14908393332443962,
+          "audio": 0.13318144085503492,
+          "vision": 0.7177346258205254
+        },
+        "primary_modality": "vision",
+        "primary_tied_modalities": [
+          "vision"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": -5.551115123125783e-17,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "15",
+      "target_output": "regression_value",
+      "prediction": 0.7901668548583984,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": 0.7901668548583984,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": 0.7467864155769348,
+          "audio": -0.30231332778930664,
+          "vision": -0.0021681967191398144,
+          "text+audio": 0.7696546912193298,
+          "text+vision": 0.7818912267684937,
+          "audio+vision": -0.07914668321609497,
+          "text+audio+vision": 0.7901668548583984
+        },
+        "signed_contributions": {
+          "text": 0.8628464123078932,
+          "audio": -0.0922224143675218,
+          "vision": 0.06396841894214352
+        },
+        "degrees": {
+          "text": 0.8467270612714354,
+          "audio": 0.09049955216468367,
+          "vision": 0.06277338656388097
+        },
+        "primary_modality": "text",
+        "primary_tied_modalities": [
+          "text"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": 0.0,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "16",
+      "target_output": "regression_value",
+      "prediction": -2.1857247352600098,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": -2.1857247352600098,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": -2.111814498901367,
+          "audio": -0.4071289300918579,
+          "vision": -1.3311047554016113,
+          "text+audio": -2.1473355293273926,
+          "text+vision": -2.164797067642212,
+          "audio+vision": -1.1529150009155273,
+          "text+audio+vision": -2.1857247352600098
+        },
+        "signed_contributions": {
+          "text": -1.4623827089866004,
+          "audio": -0.10409889121850333,
+          "vision": -0.5748175730307896
+        },
+        "degrees": {
+          "text": 0.6829417987289808,
+          "audio": 0.04861482810045218,
+          "vision": 0.26844337317056705
+        },
+        "primary_modality": "text",
+        "primary_tied_modalities": [
+          "text"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": 0.0,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "17",
+      "target_output": "regression_value",
+      "prediction": 1.2839354276657104,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": 1.2839354276657104,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": 1.1810035705566406,
+          "audio": -0.3563971519470215,
+          "vision": -0.4589011073112488,
+          "text+audio": 1.2101274728775024,
+          "text+vision": 1.2769277095794678,
+          "audio+vision": -0.5404411554336548,
+          "text+audio+vision": 1.2839354276657104
+        },
+        "signed_contributions": {
+          "text": 1.5669941455125809,
+          "audio": -0.11039064824581146,
+          "vision": -0.12824250757694244
+        },
+        "degrees": {
+          "text": 0.867839196025517,
+          "audio": 0.06113700660383961,
+          "vision": 0.07102379737064338
+        },
+        "primary_modality": "text",
+        "primary_tied_modalities": [
+          "text"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": 0.0,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "18",
+      "target_output": "regression_value",
+      "prediction": -0.11036492884159088,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": -0.11036492884159088,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": -0.027381280437111855,
+          "audio": -0.3049546182155609,
+          "vision": -0.9257614016532898,
+          "text+audio": -0.016608519479632378,
+          "text+vision": -0.11833213269710541,
+          "audio+vision": -0.7318804860115051,
+          "text+audio+vision": -0.11036492884159088
+        },
+        "signed_contributions": {
+          "text": 0.3954825075343251,
+          "audio": -0.05007833801209926,
+          "vision": -0.4113435363397002
+        },
+        "degrees": {
+          "text": 0.46152466470510056,
+          "audio": 0.05844098719844596,
+          "vision": 0.48003434809645346
+        },
+        "primary_modality": "vision",
+        "primary_tied_modalities": [
+          "vision"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": 0.0,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "19",
+      "target_output": "regression_value",
+      "prediction": -0.08350168168544769,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": -0.08350168168544769,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": -0.29806429147720337,
+          "audio": -0.3016861379146576,
+          "vision": 0.2657119035720825,
+          "text+audio": -0.2926698923110962,
+          "text+vision": -0.07954137027263641,
+          "audio+vision": 0.14852571487426758,
+          "text+audio+vision": -0.08350168168544769
+        },
+        "signed_contributions": {
+          "text": -0.2179282133777936,
+          "audio": -0.10570559402306874,
+          "vision": 0.28455768773953116
+        },
+        "degrees": {
+          "text": 0.35832170479050773,
+          "audio": 0.17380314402237393,
+          "vision": 0.46787515118711837
+        },
+        "primary_modality": "vision",
+        "primary_tied_modalities": [
+          "vision"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": 0.0,
+        "model_calls": 8
+      }
+    },
+    {
+      "sample_id": "20",
+      "target_output": "regression_value",
+      "prediction": 0.6568118333816528,
+      "shapley": {
+        "baseline_score": -0.044425562024116516,
+        "full_score": 0.6568118333816528,
+        "coalition_scores": {
+          "empty": -0.044425562024116516,
+          "text": 0.5068129301071167,
+          "audio": -0.3222917914390564,
+          "vision": -0.7854450345039368,
+          "text+audio": 0.5441875457763672,
+          "text+vision": 0.6551277041435242,
+          "audio+vision": -0.7115063667297363,
+          "text+audio+vision": 0.6568118333816528
+        },
+        "signed_contributions": {
+          "text": 1.0243609100580215,
+          "audio": -0.07350848615169525,
+          "vision": -0.24961502850055697
+        },
+        "degrees": {
+          "text": 0.7602024121935748,
+          "audio": 0.0545523827984138,
+          "vision": 0.18524520500801142
+        },
+        "primary_modality": "text",
+        "primary_tied_modalities": [
+          "text"
+        ],
+        "primary_confidence": "unique",
+        "efficiency_residual": 0.0,
+        "model_calls": 8
+      }
+    }
+  ]
+}

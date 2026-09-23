@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0.0",
+  "sample_id": "14",
+  "prediction": {
+    "polarity": "Positive",
+    "intensity": 0.3063417971134186,
+    "probabilities": {
+      "Negative": 0.12935298681259155,
+      "Neutral": 0.4187130331993103,
+      "Positive": 0.4519340395927429
+    }
+  },
+  "explanation": {
+    "target_output": "predicted_class_probability:Positive",
+    "baseline_score": 0.38453319668769836,
+    "full_score": 0.4519340395927429,
+    "coalition_scores": {
+      "empty": 0.38453319668769836,
+      "text": 0.2675095796585083,
+      "audio": 0.3835076689720154,
+      "vision": 0.7440106868743896,
+      "text+audio": 0.2604480981826782,
+      "text+vision": 0.4617794454097748,
+      "audio+vision": 0.772064745426178,
+      "text+audio+vision": 0.4519340395927429
+    },
+    "modalities": {
+      "text": {
+        "available": true,
+        "shapley_signed": -0.21326657632986704,
+        "degree": 0.4315531874355905
+      },
+      "audio": {
+        "available": true,
+        "shapley_signed": -0.00012488166491190621,
+        "degree": 0.000252702891716319
+      },
+      "vision": {
+        "available": true,
+        "shapley_signed": 0.2807923008998235,
+        "degree": 0.5681941096726931
+      }
+    },
+    "primary_modality": "vision",
+    "primary_tied_modalities": [
+      "vision"
+    ],
+    "primary_confidence": "unique",
+    "efficiency_residual": 0.0,
+    "evidence": {
+      "text": [
+        {
+          "start_index": 28,
+          "end_index": 29,
+          "score_drop": 0.013340145349502563,
+          "importance": 0.013340145349502563,
+          "peak_importance": 0.013340145349502563,
+          "member_windows": [
+            [
+              28,
+              29
+            ]
+          ],
+          "text": "courses",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        },
+        {
+          "start_index": 33,
+          "end_index": 34,
+          "score_drop": 0.009359478950500488,
+          "importance": 0.009359478950500488,
+          "peak_importance": 0.009359478950500488,
+          "member_windows": [
+            [
+              33,
+              34
+            ]
+          ],
+          "text": "york",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        },
+        {
+          "start_index": 10,
+          "end_index": 11,
+          "score_drop": 0.008997678756713867,
+          "importance": 0.008997678756713867,
+          "peak_importance": 0.008997678756713867,
+          "member_windows": [
+            [
+              10,
+              11
+            ]
+          ],
+          "text": "and",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        },
+        {
+          "start_index": 23,
+          "end_index": 24,
+          "score_drop": 0.0059510767459869385,
+          "importance": 0.0059510767459869385,
+          "peak_importance": 0.0059510767459869385,
+          "member_windows": [
+            [
+              23,
+              24
+            ]
+          ],
+          "text": "examination",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        },
+        {
+          "start_index": 6,
+          "end_index": 7,
+          "score_drop": 0.0057668983936309814,
+          "importance": 0.0057668983936309814,
+          "peak_importance": 0.0057668983936309814,
+          "member_windows": [
+            [
+              6,
+              7
+            ]
+          ],
+          "text": "founder",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        }
+      ],
+      "audio": [
+        {
+          "start_index": 7,
+          "end_index": 15,
+          "score_drop": 0.0013090968132019043,
+          "importance": 0.0013090968132019043,
+          "peak_importance": 0.00034821033477783203,
+          "member_windows": [
+            [
+              7,
+              10
+            ],
+            [
+              8,
+              11
+            ],
+            [
+              9,
+              12
+            ],
+            [
+              11,
+              14
+            ],
+            [
+              12,
+              15
+            ]
+          ],
+          "time": {
+            "start_sec": 1.849706457925636,
+            "end_sec": 4.107436399217221,
+            "keyframe_sec": null,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          }
+        }
+      ],
+      "vision": [
+        {
+          "start_index": 30,
+          "end_index": 36,
+          "score_drop": 0.026354581117630005,
+          "importance": 0.026354581117630005,
+          "peak_importance": 0.006787538528442383,
+          "member_windows": [
+            [
+              30,
+              33
+            ],
+            [
+              31,
+              34
+            ],
+            [
+              32,
+              35
+            ],
+            [
+              33,
+              36
+            ]
+          ],
+          "time": {
+            "start_sec": 11.356653620352251,
+            "end_sec": 13.9,
+            "keyframe_sec": 12.628326810176127,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          },
+          "keyframe_sec": 12.628326810176127
+        },
+        {
+          "start_index": 18,
+          "end_index": 21,
+          "score_drop": 0.006113976240158081,
+          "importance": 0.006113976240158081,
+          "peak_importance": 0.006113976240158081,
+          "member_windows": [
+            [
+              18,
+              21
+            ]
+          ],
+          "time": {
+            "start_sec": 5.154696673189823,
+            "end_sec": 6.759589041095889,
+            "keyframe_sec": 5.957142857142856,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          },
+          "keyframe_sec": 5.957142857142856
+        }
+      ]
+    }
+  },
+  "faithfulness": {
+    "metric": "AOPC cumulative deletion",
+    "ranked_aopc": 0.013261789083480835,
+    "random_aopc_mean": -0.0026455668807029726,
+    "random_aopc_std": 0.010604202373774262,
+    "aopc_gain_over_random": 0.015907355964183807,
+    "steps": 5,
+    "random_trials": 100,
+    "seed": 20260923
+  },
+  "quality": {
+    "flags": [],
+    "notes": []
+  },
+  "provenance": {
+    "feature_version": "aligned_50",
+    "explainer": "exact_3modality_shapley_plus_local_occlusion",
+    "explainer_config": "configs/explanation.yaml",
+    "model_reference": "frozen_robust_gated.pt@sha256:989b84b5e507a97186179e80e0f7f8c8e29714f3c84a84aa1d60b3a2ee5bb601"
+  }
+}

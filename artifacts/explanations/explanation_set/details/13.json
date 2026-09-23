@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "sample_id": "13",
+  "prediction": {
+    "polarity": "Neutral",
+    "intensity": 0.08616062998771667,
+    "probabilities": {
+      "Negative": 0.1364564746618271,
+      "Neutral": 0.5478392839431763,
+      "Positive": 0.3157042860984802
+    }
+  },
+  "explanation": {
+    "target_output": "predicted_class_probability:Neutral",
+    "baseline_score": 0.3023746907711029,
+    "full_score": 0.5478392839431763,
+    "coalition_scores": {
+      "empty": 0.3023746907711029,
+      "text": 0.541816234588623,
+      "audio": 0.32586053013801575,
+      "vision": 0.3023746907711029,
+      "text+audio": 0.5478392839431763,
+      "text+vision": 0.541816234588623,
+      "audio+vision": 0.32586053013801575,
+      "text+audio+vision": 0.5478392839431763
+    },
+    "modalities": {
+      "text": {
+        "available": true,
+        "shapley_signed": 0.2307101488113403,
+        "degree": 0.9398917612920654
+      },
+      "audio": {
+        "available": true,
+        "shapley_signed": 0.014754444360733029,
+        "degree": 0.060108238707934566
+      },
+      "vision": {
+        "available": false,
+        "shapley_signed": 0.0,
+        "degree": 0.0
+      }
+    },
+    "primary_modality": "text",
+    "primary_tied_modalities": [
+      "text"
+    ],
+    "primary_confidence": "unique",
+    "efficiency_residual": 2.7755575615628914e-17,
+    "evidence": {
+      "text": [
+        {
+          "start_index": 0,
+          "end_index": 3,
+          "score_drop": 0.010647296905517578,
+          "importance": 0.010647296905517578,
+          "peak_importance": 0.005097150802612305,
+          "member_windows": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "text": "for example",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        },
+        {
+          "start_index": 19,
+          "end_index": 21,
+          "score_drop": 0.004588007926940918,
+          "importance": 0.004588007926940918,
+          "peak_importance": 0.0029510855674743652,
+          "member_windows": [
+            [
+              19,
+              20
+            ],
+            [
+              20,
+              21
+            ]
+          ],
+          "text": "a relationship",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        }
+      ],
+      "audio": [
+        {
+          "start_index": 24,
+          "end_index": 31,
+          "score_drop": 0.0007622241973876953,
+          "importance": 0.0007622241973876953,
+          "peak_importance": 0.00019472837448120117,
+          "member_windows": [
+            [
+              24,
+              27
+            ],
+            [
+              25,
+              28
+            ],
+            [
+              26,
+              29
+            ],
+            [
+              27,
+              30
+            ],
+            [
+              28,
+              31
+            ]
+          ],
+          "time": {
+            "start_sec": 6.725496535796767,
+            "end_sec": 8.68,
+            "keyframe_sec": null,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          }
+        }
+      ],
+      "vision": []
+    }
+  },
+  "faithfulness": {
+    "metric": "AOPC cumulative deletion",
+    "ranked_aopc": 0.011999845504760742,
+    "random_aopc_mean": 0.00047294354438781735,
+    "random_aopc_std": 0.0031155954844697235,
+    "aopc_gain_over_random": 0.011526901960372924,
+    "steps": 5,
+    "random_trials": 100,
+    "seed": 20260923
+  },
+  "quality": {
+    "flags": [
+      "VISION_ALL_ZERO"
+    ],
+    "notes": [
+      "vision unavailable in model input; contribution and evidence forced to zero/empty"
+    ]
+  },
+  "provenance": {
+    "feature_version": "aligned_50",
+    "explainer": "exact_3modality_shapley_plus_local_occlusion",
+    "explainer_config": "configs/explanation.yaml",
+    "model_reference": "frozen_robust_gated.pt@sha256:989b84b5e507a97186179e80e0f7f8c8e29714f3c84a84aa1d60b3a2ee5bb601"
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "schema_version": "1.0.0",
+  "sample_id": "04",
+  "prediction": {
+    "polarity": "Negative",
+    "intensity": -0.42855894565582275,
+    "probabilities": {
+      "Negative": 0.6053750514984131,
+      "Neutral": 0.1875375211238861,
+      "Positive": 0.20708748698234558
+    }
+  },
+  "explanation": {
+    "target_output": "predicted_class_probability:Negative",
+    "baseline_score": 0.31309211254119873,
+    "full_score": 0.6053750514984131,
+    "coalition_scores": {
+      "empty": 0.31309211254119873,
+      "text": 0.6898020505905151,
+      "audio": 0.29809144139289856,
+      "vision": 0.1243513897061348,
+      "text+audio": 0.6721028089523315,
+      "text+vision": 0.6264892816543579,
+      "audio+vision": 0.13231928646564484,
+      "text+audio+vision": 0.6053750514984131
+    },
+    "modalities": {
+      "text": {
+        "available": true,
+        "shapley_signed": 0.4292801109453042,
+        "degree": 0.7580740458483065
+      },
+      "audio": {
+        "available": true,
+        "shapley_signed": -0.013660191247860592,
+        "degree": 0.024122795774357973
+      },
+      "vision": {
+        "available": true,
+        "shapley_signed": -0.12333698074022928,
+        "degree": 0.21780315837733555
+      }
+    },
+    "primary_modality": "text",
+    "primary_tied_modalities": [
+      "text"
+    ],
+    "primary_confidence": "unique",
+    "efficiency_residual": 0.0,
+    "evidence": {
+      "text": [
+        {
+          "start_index": 24,
+          "end_index": 26,
+          "score_drop": 0.08548027276992798,
+          "importance": 0.08548027276992798,
+          "peak_importance": 0.05621170997619629,
+          "member_windows": [
+            [
+              24,
+              25
+            ],
+            [
+              25,
+              26
+            ]
+          ],
+          "text": "absolutely not",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        },
+        {
+          "start_index": 10,
+          "end_index": 11,
+          "score_drop": 0.043637871742248535,
+          "importance": 0.043637871742248535,
+          "peak_importance": 0.043637871742248535,
+          "member_windows": [
+            [
+              10,
+              11
+            ]
+          ],
+          "text": "should",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        },
+        {
+          "start_index": 2,
+          "end_index": 3,
+          "score_drop": 0.02517879009246826,
+          "importance": 0.02517879009246826,
+          "peak_importance": 0.02517879009246826,
+          "member_windows": [
+            [
+              2,
+              3
+            ]
+          ],
+          "text": "i",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        },
+        {
+          "start_index": 21,
+          "end_index": 22,
+          "score_drop": 0.02223902940750122,
+          "importance": 0.02223902940750122,
+          "peak_importance": 0.02223902940750122,
+          "member_windows": [
+            [
+              21,
+              22
+            ]
+          ],
+          "text": "goodbye",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        }
+      ],
+      "audio": [
+        {
+          "start_index": 5,
+          "end_index": 12,
+          "score_drop": 0.0017813444137573242,
+          "importance": 0.0017813444137573242,
+          "peak_importance": 0.0005318522453308105,
+          "member_windows": [
+            [
+              5,
+              8
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              7,
+              10
+            ],
+            [
+              9,
+              12
+            ]
+          ],
+          "time": {
+            "start_sec": 1.4684210526315788,
+            "end_sec": 3.317543859649123,
+            "keyframe_sec": null,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          }
+        },
+        {
+          "start_index": 21,
+          "end_index": 24,
+          "score_drop": 0.0004290938377380371,
+          "importance": 0.0004290938377380371,
+          "peak_importance": 0.0004290938377380371,
+          "member_windows": [
+            [
+              21,
+              24
+            ]
+          ],
+          "time": {
+            "start_sec": 5.941666666666667,
+            "end_sec": 7.0701754385964914,
+            "keyframe_sec": null,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          }
+        }
+      ],
+      "vision": [
+        {
+          "start_index": 0,
+          "end_index": 7,
+          "score_drop": 0.061943113803863525,
+          "importance": 0.061943113803863525,
+          "peak_importance": 0.019319593906402588,
+          "member_windows": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "time": {
+            "start_sec": 0.0,
+            "end_sec": 1.7131578947368422,
+            "keyframe_sec": 0.8565789473684211,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          },
+          "keyframe_sec": 0.8565789473684211
+        }
+      ]
+    }
+  },
+  "faithfulness": {
+    "metric": "AOPC cumulative deletion",
+    "ranked_aopc": 0.14017738699913024,
+    "random_aopc_mean": 0.0016742844581604005,
+    "random_aopc_std": 0.037101023132309376,
+    "aopc_gain_over_random": 0.13850310254096984,
+    "steps": 5,
+    "random_trials": 100,
+    "seed": 20260923
+  },
+  "quality": {
+    "flags": [],
+    "notes": []
+  },
+  "provenance": {
+    "feature_version": "aligned_50",
+    "explainer": "exact_3modality_shapley_plus_local_occlusion",
+    "explainer_config": "configs/explanation.yaml",
+    "model_reference": "frozen_robust_gated.pt@sha256:989b84b5e507a97186179e80e0f7f8c8e29714f3c84a84aa1d60b3a2ee5bb601"
+  }
+}

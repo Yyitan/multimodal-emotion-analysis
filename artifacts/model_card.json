@@ -1,0 +1,62 @@
+{
+  "purpose": "Frozen robust model for missing-modality robust prediction and shared backbone for the explanation module.",
+  "selection_split": "valid only",
+  "selection_rule": "0.35*MacroF1 + 0.15*Accuracy + 0.25*((Pearson+1)/2) + 0.25*(1-clip(MAE,0,6)/6)",
+  "candidates": [
+    {
+      "tag": "model_gated_seed2026",
+      "checkpoint": "artifacts/models/model_gated_seed2026.pt",
+      "best_epoch": 2,
+      "selection_score": 0.7396859205381561,
+      "valid": {
+        "accuracy": 0.6208791208791209,
+        "macro_f1": 0.6093818999740374,
+        "weighted_f1": 0.6245850128296841,
+        "mae": 0.5857491347600404,
+        "pearson": 0.661412810909679
+      }
+    },
+    {
+      "tag": "model_gated_seed3407",
+      "checkpoint": "artifacts/models/model_gated_seed3407.pt",
+      "best_epoch": 2,
+      "selection_score": 0.7371254045150435,
+      "valid": {
+        "accuracy": 0.6318681318681318,
+        "macro_f1": 0.6013907324798414,
+        "weighted_f1": 0.6279201185424664,
+        "mae": 0.5890332693544313,
+        "pearson": 0.6512118500531779
+      }
+    },
+    {
+      "tag": "model_gated_seed20260923",
+      "checkpoint": "artifacts/models/model_gated_seed20260923.pt",
+      "best_epoch": 2,
+      "selection_score": 0.7320056856699249,
+      "valid": {
+        "accuracy": 0.625,
+        "macro_f1": 0.5907661633508522,
+        "weighted_f1": 0.6182556779777935,
+        "mae": 0.586546558354742,
+        "pearson": 0.6474157474285939
+      }
+    }
+  ],
+  "selected": {
+    "tag": "model_gated_seed2026",
+    "checkpoint": "artifacts/models/model_gated_seed2026.pt",
+    "best_epoch": 2,
+    "selection_score": 0.7396859205381561,
+    "valid": {
+      "accuracy": 0.6208791208791209,
+      "macro_f1": 0.6093818999740374,
+      "weighted_f1": 0.6245850128296841,
+      "mae": 0.5857491347600404,
+      "pearson": 0.661412810909679
+    }
+  },
+  "frozen_checkpoint": "artifacts/models.pt",
+  "checkpoint_sha256": "989b84b5e507a97186179e80e0f7f8c8e29714f3c84a84aa1d60b3a2ee5bb601",
+  "policy": "The no-augmentation and no-consistency runs are ablations only and are not candidates for the robust deployment checkpoint. No evaluation-set labels, IDs, texts, or feature matches were used for selection."
+}

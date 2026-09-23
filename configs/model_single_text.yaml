@@ -1,0 +1,36 @@
+seed: 2026
+device: auto
+
+data:
+  aligned_path: data/features_aligned/aligned_50.pkl
+  train_split: train
+  valid_split: valid
+  test_split: test
+
+model:
+  type: single
+  modalities: [text]
+  hidden_dim: 64
+  dropout: 0.20
+
+training:
+  epochs: 10
+  batch_size: 32
+  num_workers: 0
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  gradient_clip: 5.0
+  classification_weight: 1.0
+  regression_weight: 1.0
+  consistency_weight: 0.0
+  selection_weights:
+    macro_f1: 0.35
+    accuracy: 0.15
+    pearson: 0.25
+    mae: 0.25
+  augmentation:
+    enabled: false
+
+output:
+  checkpoint: artifacts/models/single_text_baseline.pt
+  metrics: artifacts/metrics/single_text_training.json

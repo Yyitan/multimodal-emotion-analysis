@@ -1,0 +1,230 @@
+{
+  "schema_version": "1.0.0",
+  "sample_id": "07",
+  "prediction": {
+    "polarity": "Positive",
+    "intensity": 0.745092511177063,
+    "probabilities": {
+      "Negative": 0.036527205258607864,
+      "Neutral": 0.2624853253364563,
+      "Positive": 0.7009875178337097
+    }
+  },
+  "explanation": {
+    "target_output": "predicted_class_probability:Positive",
+    "baseline_score": 0.38453319668769836,
+    "full_score": 0.7009875178337097,
+    "coalition_scores": {
+      "empty": 0.38453319668769836,
+      "text": 0.6434240341186523,
+      "audio": 0.3789995610713959,
+      "vision": 0.590076208114624,
+      "text+audio": 0.636346161365509,
+      "text+vision": 0.7075031995773315,
+      "audio+vision": 0.5809646844863892,
+      "text+audio+vision": 0.7009875178337097
+    },
+    "modalities": {
+      "text": {
+        "available": true,
+        "shapley_signed": 0.18876682221889496,
+        "degree": 0.5722223993927578
+      },
+      "audio": {
+        "available": true,
+        "shapley_signed": -0.006714671850204467,
+        "degree": 0.020354666101246723
+      },
+      "vision": {
+        "available": true,
+        "shapley_signed": 0.13440217077732083,
+        "degree": 0.4074229345059954
+      }
+    },
+    "primary_modality": "text",
+    "primary_tied_modalities": [
+      "text"
+    ],
+    "primary_confidence": "unique",
+    "efficiency_residual": 0.0,
+    "evidence": {
+      "text": [
+        {
+          "start_index": 20,
+          "end_index": 22,
+          "score_drop": 0.020535528659820557,
+          "importance": 0.020535528659820557,
+          "peak_importance": 0.012203395366668701,
+          "member_windows": [
+            [
+              20,
+              21
+            ],
+            [
+              21,
+              22
+            ]
+          ],
+          "text": "“ enthusiastically",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        },
+        {
+          "start_index": 46,
+          "end_index": 48,
+          "score_drop": 0.016009390354156494,
+          "importance": 0.016009390354156494,
+          "peak_importance": 0.009008288383483887,
+          "member_windows": [
+            [
+              46,
+              47
+            ],
+            [
+              47,
+              48
+            ]
+          ],
+          "text": "ways the",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        },
+        {
+          "start_index": 26,
+          "end_index": 27,
+          "score_drop": 0.010724902153015137,
+          "importance": 0.010724902153015137,
+          "peak_importance": 0.010724902153015137,
+          "member_windows": [
+            [
+              26,
+              27
+            ]
+          ],
+          "text": "growing",
+          "location_method": "token_alignment",
+          "location_confidence": "exact"
+        }
+      ],
+      "audio": [
+        {
+          "start_index": 34,
+          "end_index": 39,
+          "score_drop": 0.00035840272903442383,
+          "importance": 0.00035840272903442383,
+          "peak_importance": 0.0001233816146850586,
+          "member_windows": [
+            [
+              34,
+              37
+            ],
+            [
+              35,
+              38
+            ],
+            [
+              36,
+              39
+            ]
+          ],
+          "time": {
+            "start_sec": 12.27133301975541,
+            "end_sec": 14.008163687676388,
+            "keyframe_sec": null,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          }
+        },
+        {
+          "start_index": 41,
+          "end_index": 45,
+          "score_drop": 0.00028383731842041016,
+          "importance": 0.00028383731842041016,
+          "peak_importance": 0.00014531612396240234,
+          "member_windows": [
+            [
+              41,
+              44
+            ],
+            [
+              42,
+              45
+            ]
+          ],
+          "time": {
+            "start_sec": 14.008163687676388,
+            "end_sec": 16.22177140169332,
+            "keyframe_sec": null,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          }
+        }
+      ],
+      "vision": [
+        {
+          "start_index": 38,
+          "end_index": 46,
+          "score_drop": 0.03496527671813965,
+          "importance": 0.03496527671813965,
+          "peak_importance": 0.0072517991065979,
+          "member_windows": [
+            [
+              38,
+              41
+            ],
+            [
+              39,
+              42
+            ],
+            [
+              40,
+              43
+            ],
+            [
+              41,
+              44
+            ],
+            [
+              43,
+              46
+            ]
+          ],
+          "time": {
+            "start_sec": 13.826534336782691,
+            "end_sec": 16.42610442144873,
+            "keyframe_sec": 15.12631937911571,
+            "method": "forced_alignment",
+            "confidence": "aligned",
+            "approximate": false,
+            "note": "由提供的强制对齐区间聚合；未进行时间猜测。"
+          },
+          "keyframe_sec": 15.12631937911571
+        }
+      ]
+    }
+  },
+  "faithfulness": {
+    "metric": "AOPC cumulative deletion",
+    "ranked_aopc": 0.03358060121536255,
+    "random_aopc_mean": 0.0004576265811920165,
+    "random_aopc_std": 0.009337292824001472,
+    "aopc_gain_over_random": 0.033122974634170535,
+    "steps": 5,
+    "random_trials": 100,
+    "seed": 20260923
+  },
+  "quality": {
+    "flags": [],
+    "notes": []
+  },
+  "provenance": {
+    "feature_version": "aligned_50",
+    "explainer": "exact_3modality_shapley_plus_local_occlusion",
+    "explainer_config": "configs/explanation.yaml",
+    "model_reference": "frozen_robust_gated.pt@sha256:989b84b5e507a97186179e80e0f7f8c8e29714f3c84a84aa1d60b3a2ee5bb601"
+  }
+}

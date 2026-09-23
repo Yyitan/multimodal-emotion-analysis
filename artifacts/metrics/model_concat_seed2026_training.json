@@ -1,0 +1,172 @@
+[
+  {
+    "epoch": 1,
+    "train": {
+      "loss": 1.3126209530458184,
+      "classification_loss": 0.9255731484500228,
+      "regression_loss": 0.3870478038968236,
+      "consistency_loss": 0.0
+    },
+    "valid": {
+      "accuracy": 0.6057692307692307,
+      "macro_f1": 0.4641365658874032,
+      "weighted_f1": 0.521801062410521,
+      "mae": 0.6310722018850476,
+      "pearson": 0.6205272748858827
+    },
+    "selection_score": 0.6795844169581674
+  },
+  {
+    "epoch": 2,
+    "train": {
+      "loss": 1.0722432420250243,
+      "classification_loss": 0.7703066600440002,
+      "regression_loss": 0.3019365812655928,
+      "consistency_loss": 0.0
+    },
+    "valid": {
+      "accuracy": 0.6318681318681318,
+      "macro_f1": 0.586620470602165,
+      "weighted_f1": 0.616002356588473,
+      "mae": 0.6045542137019636,
+      "pearson": 0.643487360458258
+    },
+    "selection_score": 0.7303435456440114
+  },
+  {
+    "epoch": 3,
+    "train": {
+      "loss": 0.9734012074077252,
+      "classification_loss": 0.7077427064722873,
+      "regression_loss": 0.2656584932939293,
+      "consistency_loss": 0.0
+    },
+    "valid": {
+      "accuracy": 0.5989010989010989,
+      "macro_f1": 0.5483829496292757,
+      "weighted_f1": 0.5824480697909723,
+      "mae": 0.6030111292093752,
+      "pearson": 0.6496713599640657
+    },
+    "selection_score": 0.7128526534838623
+  },
+  {
+    "epoch": 4,
+    "train": {
+      "loss": 0.912383114009964,
+      "classification_loss": 0.6656841117784447,
+      "regression_loss": 0.2466990034517027,
+      "consistency_loss": 0.0
+    },
+    "valid": {
+      "accuracy": 0.6236263736263736,
+      "macro_f1": 0.6002804895731567,
+      "weighted_f1": 0.6226235580993089,
+      "mae": 0.6150296324575231,
+      "pearson": 0.6386281874789479
+    },
+    "selection_score": 0.7328444161436992
+  },
+  {
+    "epoch": 5,
+    "train": {
+      "loss": 0.847061513204111,
+      "classification_loss": 0.619243330369115,
+      "regression_loss": 0.22781818637265022,
+      "consistency_loss": 0.0
+    },
+    "valid": {
+      "accuracy": 0.5824175824175825,
+      "macro_f1": 0.5376275152031008,
+      "weighted_f1": 0.5704856618866804,
+      "mae": 0.6256440797236053,
+      "pearson": 0.6262476998756076
+    },
+    "selection_score": 0.7027447268463567
+  },
+  {
+    "epoch": 6,
+    "train": {
+      "loss": 0.7988361389893319,
+      "classification_loss": 0.5816756045168735,
+      "regression_loss": 0.21716053271679886,
+      "consistency_loss": 0.0
+    },
+    "valid": {
+      "accuracy": 0.6222527472527473,
+      "macro_f1": 0.5608969760212178,
+      "weighted_f1": 0.5950030387664902,
+      "mae": 0.6759445075571581,
+      "pearson": 0.6379907574308645
+    },
+    "selection_score": 0.7162363438926481
+  },
+  {
+    "epoch": 7,
+    "train": {
+      "loss": 0.7362827226585422,
+      "classification_loss": 0.539255976413592,
+      "regression_loss": 0.19702674570069573,
+      "consistency_loss": 0.0
+    },
+    "valid": {
+      "accuracy": 0.5796703296703297,
+      "macro_f1": 0.5665734663783177,
+      "weighted_f1": 0.5878853356942064,
+      "mae": 0.6103284492815914,
+      "pearson": 0.6268940426808673
+    },
+    "selection_score": 0.7131826659646694
+  },
+  {
+    "epoch": 8,
+    "train": {
+      "loss": 0.6738071200159407,
+      "classification_loss": 0.48741984981851477,
+      "regression_loss": 0.18638726787337148,
+      "consistency_loss": 0.0
+    },
+    "valid": {
+      "accuracy": 0.5824175824175825,
+      "macro_f1": 0.5703226439921102,
+      "weighted_f1": 0.5889075344373572,
+      "mae": 0.6223169981449546,
+      "pearson": 0.6090710556268304
+    },
+    "selection_score": 0.7121795697905233
+  },
+  {
+    "epoch": 9,
+    "train": {
+      "loss": 0.6262043449243144,
+      "classification_loss": 0.4488139355744459,
+      "regression_loss": 0.17739040912602191,
+      "consistency_loss": 0.0
+    },
+    "valid": {
+      "accuracy": 0.5837912087912088,
+      "macro_f1": 0.5576455540742619,
+      "weighted_f1": 0.5840269808130316,
+      "mae": 0.6223308378288454,
+      "pearson": 0.6030505747906676
+    },
+    "selection_score": 0.7071954955173045
+  },
+  {
+    "epoch": 10,
+    "train": {
+      "loss": 0.587502404674339,
+      "classification_loss": 0.41842853882664127,
+      "regression_loss": 0.16907386605755395,
+      "consistency_loss": 0.0
+    },
+    "valid": {
+      "accuracy": 0.5934065934065934,
+      "macro_f1": 0.5288115928813056,
+      "weighted_f1": 0.5662346683202621,
+      "mae": 0.6327921868756715,
+      "pearson": 0.6164027698443314
+    },
+    "selection_score": 0.6997790516301677
+  }
+]

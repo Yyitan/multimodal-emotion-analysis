@@ -1,0 +1,35 @@
+schema_version: "1.0.0"
+feature_version: aligned_50
+modalities: [text, audio, vision]
+shapley:
+  exact: true
+  coalition_count: 8
+  baseline: zero_tensor
+  contribution_degree: absolute_shapley_l1
+  target: predicted_class_probability
+  tie_tolerance: 1.0e-12
+occlusion:
+  text_window: 1
+  audio_window: 3
+  vision_window: 3
+  stride: 1
+  top_k_before_merge: 5
+  max_merge_gap: 0
+faithfulness:
+  metric: AOPC cumulative deletion
+  max_steps: 5
+  random_trials: 100
+  seed: 20260923
+time_mapping:
+  prefer_forced_alignment: true
+  fallback: uniform_by_video_duration
+  fallback_confidence: approximate
+  forbid_fabricated_timestamps: true
+quality:
+  all_zero_modality_available: false
+  unavailable_contribution: 0.0
+  unavailable_evidence: []
+  sample_13_expected_flag: VISION_ALL_ZERO
+outputs:
+  csv_schema: configs/explanation_set_csv.schema.json
+  json_schema: configs/explanation_set_detail.schema.json

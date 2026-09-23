@@ -1,0 +1,57 @@
+# Pre-registered full robustness protocol. Freeze this file before any test run.
+seed: 20260923
+device: auto
+
+data:
+  # Aligned features only. May instead be an environment-expanded path such as
+  # ${DATA_ROOT}/features_aligned/aligned_50.pkl.
+  aligned_path: data/features_aligned/aligned_50.pkl
+
+models:
+  # The sole formally frozen model selected on validation; do not substitute a
+  # candidate checkpoint for official valid/test robustness reporting.
+  - name: frozen_robust_gated
+    family: frozen_gated
+    role: primary
+    seed: 2026
+    checkpoint: artifacts/models.pt
+
+evaluation:
+  batch_size: 64
+  num_workers: 0
+
+statistics:
+  bootstrap_resamples: 2000
+  confidence: 0.95
+
+# Validation is the only split used to study trends/sensitivity.
+validation_grid:
+  modalities: [T, A, V, TA, TV, AV, TAV]
+  missing_rates: [0, 0.1, 0.2, 0.3, 0.5, 0.7]
+  positions: [head, middle, tail, random]
+  span_counts: [1, 3]
+
+# Test is deliberately smaller and fixed in advance: clean plus one-span random
+# corruption at every required modality/rate combination. It is never used to
+# choose checkpoints, grids, hyperparameters, or reporting conventions.
+test_grid:
+  modalities: [T, A, V, TA, TV, AV, TAV]
+  missing_rates: [0, 0.1, 0.2, 0.3, 0.5, 0.7]
+  positions: [random]
+  span_counts: [1]
+
+smoke:
+  max_samples: 16
+  max_conditions: 4
+  bootstrap_resamples: 50
+
+summary:
+  primary_family: frozen_gated
+  figure_split: valid
+  # Validation metrics of the three training seeds are read from the frozen
+  # model card only; candidate checkpoints are never loaded by this evaluator.
+  multiseed_model_card: artifacts/model_card.json
+
+output:
+  metrics_dir: artifacts/metrics
+  figures_dir: artifacts/figures
